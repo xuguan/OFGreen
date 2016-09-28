@@ -1,0 +1,45 @@
+2015-10-7 21:04:18
+添加日志
+
+2015-10-8 16:33:13
+unable to alloc 1120 bytes
+
+This application has requested the Runtime to terminate it in an unusual way.
+Please contact the application's support team for more information.
+
+Simulation terminated with exit code: 3
+Working directory: D:/omnetpp-4.2.2/samples/openflow/scenarios
+Command line: ../openflow.exe -r 0 -u Tkenv -c BEERs-noweight -n ..;../../inet/examples;../../inet/src -l ../../inet/src/inet --record-eventlog=false --debug-on-errors=false FT4allLongFlows.ini
+
+Environment variables:
+OMNETPP_ROOT=d:/omnetpp-4.2.2
+PATH=;D:/omnetpp-4.2.2/samples/inet/src;d:\omnetpp-4.2.2\bin;d:\omnetpp-4.2.2\msys\bin;d:\omnetpp-4.2.2\mingw\bin;d:/omnetpp-4.2.2/ide/jre/bin/client;d:/omnetpp-4.2.2/ide/jre/bin;d:/omnetpp-4.2.2/ide/jre/lib/i386;.;D:\omnetpp-4.2.2\msys\local\bin;d:\omnetpp-4.2.2\mingw\bin;D:\omnetpp-4.2.2\msys\bin;d:\omnetpp-4.2.2\bin;c:\Windows\system32;c:\Windows;c:\Windows\System32\Wbem;c:\Windows\System32\WindowsPowerShell\v1.0\;d:\CTEX\UserData\miktex\bin;d:\CTEX\MiKTeX\miktex\bin;d:\CTEX\CTeX\ctex\bin;d:\CTEX\CTeX\cct\bin;d:\CTEX\CTeX\ty\bin;d:\CTEX\Ghostscript\gs9.04\bin;d:\CTEX\GSview\gsview;d:\CTEX\WinEdt;d:\Program Files\Calibre2\; J;D:\omnetpp-4.2.2\msys\shortcuts;d:\Program Files (x86)\Nmap;d:\omnetpp-4.2.2\ide;
+OMNETPP_IMAGE_PATH=d:\omnetpp-4.2.2\images
+
+发现int BEERs::findMinPathset()分配了太多资源.
+
+2015-10-8 22:21:25
+1. The flow rate is invided. flow size, flow deadline,
+2. The ovs can not match a permitted flow, change the match function, such as the wildcard.  
+
+2015-10-9 10:52:09
+1. the controller decides the flow path and starts the flow at the same time, however the path installation delay is longer than starting flow.
+
+2015-10-9 11:49:12
+1. controller install path in bi-direction.
+1.1 TODO: adding flow id would decrease the implementaiton.
+
+2015-10-09 20:22:24
+1.因为设置流大小和流时限不太准确使得实验有些问题。
+2. 如何选择六发送顺序，仍然不准确。
+3. 可以先测试一下是否能够进行exr。即设置流大小100kb，延时100ms，估计每条流的速率到1Mbps。
+
+2015-10-10 18:03:01
+isactiveflow出错，Line311中的取值越界。
+
+2015-10-12 16:16:50
+流表项混乱，由于sp路由下发的路由太简单，更新后的match匹配函数无法正确完成匹配
+修改match->wildcards = OFPFW_IN_PORT + OFPFW_NW_PROTO;
+
+2015-10-16 15:51:42
+考虑流的端口，增加一些流

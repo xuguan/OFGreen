@@ -1,0 +1,6 @@
+file 839 1433305137                                             
+version 2
+vector 0  DCN_FatTree4G.ovs.open_Flow_Processing  "integrate(switch Active Time Overall Vector)"  ETV
+0	241 259 274291150 1455156602 3.000075 21.000075 7 0 948.39868495389 3574.5683052352 2566041.420036
+vector 1  DCN_FatTree4G.ovs.open_Flow_Processing  "integrate(switch Active Time Overall Vector)"  ETV
+1	500 339 268650775 1404189378 3.000075 27.000075 9 0 881.28344924251 4098.6554778038 2604664.7557627

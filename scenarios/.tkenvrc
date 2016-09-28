@@ -1,0 +1,14 @@
+# Partial Tkenv config file -- see $HOME/.tkenvrc as well
+inspector "TestTCPclient.H1.tcpApp[0]" "TCPOFMultiSendy" "1" "478x314+104+104:normal"
+inspector "nodetest" "nodetest" "2" "565x341+225+225:normal"
+inspector "DCN_FatTree4G0D" "DCN_FatTree4G0D" "2" "980x615+175+175:normal"
+inspector "DCN_FatTree4G0D.ovs16" "Open_Flow_Switch" "2" "565x341+50+50:normal"
+inspector "TestTCPclient.H1.tcpApp[0].flow Rate Vector" "cOutVector" "2" "418x353+156+156:normal"
+inspector "Scenario_Forwarding.client1.tcpApp[0]" "TCPSessionApp" "3" "762x285+70+670:normal"
+inspector "DCN_FatTree4.H1.pingApp[0]" "PingAppRandom" "3" "503x285+45+441:normal"
+inspector "DCN_FatTree4G0D.H5.tcpApp[1]" "TCPSinkOFbased" "3" "504x285+755+32:normal"
+inspector "Scenario_Forwarding.server1.tcpApp[0]" "TCPSinkApp" "1" "559x314+25+25:normal"
+inspector "DCN_FatTree4G0D.H12.tcpApp[1]" "TCPSinkOFbased" "3" "512x285+712+340:normal"
+inspector "Scenario_Forwarding.server1.tcpApp[0]" "TCPSinkApp" "3" "559x285+25+25:normal"
+inspector "DCN_FatTree4G.H11.tcpApp[0]" "TCPOFMultiSendy" "1" "499x314+655+306:normal"
+
